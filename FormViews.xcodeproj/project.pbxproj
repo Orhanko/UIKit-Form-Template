@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		476DA9842CCA5A3D00A489FB /* FormViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		476DA9842CCA5A3D00A489FB /* FormViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FormViews.app; path = "/Users/orhanpojskic/Desktop/FormViews/build/Debug-iphoneos/FormViews.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,16 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				476DA9862CCA5A3D00A489FB /* FormViews */,
-				476DA9852CCA5A3D00A489FB /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		476DA9852CCA5A3D00A489FB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				476DA9842CCA5A3D00A489FB /* FormViews.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +99,7 @@
 			mainGroup = 476DA97B2CCA5A3D00A489FB;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 476DA9852CCA5A3D00A489FB /* Products */;
+			productRefGroup = 476DA97B2CCA5A3D00A489FB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

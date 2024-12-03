@@ -13,10 +13,8 @@ class MainFormViewController: UIViewController {
     let viewModel = FormViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView = UITableView(frame: self.view.frame, style: .insetGrouped)
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomCell")
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -53,9 +51,7 @@ extension MainFormViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Kliknut je ovaj index: \(indexPath.row)")
-        let id = indexPath.row
-        let formVC = FormViewController()
-        formVC.title = viewModel.getFormName(id: id)
+        let formVC = FirstSubmitViewController()
         navigationController?.pushViewController(formVC, animated: true)
     }
 }
