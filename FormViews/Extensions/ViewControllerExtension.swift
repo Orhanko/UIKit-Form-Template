@@ -54,4 +54,13 @@ extension UIViewController{
         
         button.configuration = config
     }
+    func configureBackButton(for button: UIButton){
+        var config = UIButton.Configuration.filled()
+           config.title = "Back"
+           config.image = UIImage(systemName: "chevron.backward.circle.fill")
+        config.imagePlacement = .leading
+           config.imagePadding = 4
+        
+        button.configuration = config
+    }
 }

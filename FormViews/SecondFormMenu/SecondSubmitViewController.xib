@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondSubmitViewController" customModule="FormViews" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="p8N-hB-KvW" id="fcx-vz-FhH"/>
                 <outlet property="nextButton" destination="kDh-rJ-ncr" id="bfN-OS-fHs"/>
                 <outlet property="stackView" destination="ZkB-Sv-V6s" id="GJn-Sb-Ia3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,13 +48,21 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8N-hB-KvW">
+                            <rect key="frame" x="16" y="15" width="75" height="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                        </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="Mob-aZ-UPx"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="kDh-rJ-ncr" secondAttribute="bottom" constant="15" id="3vf-Xm-h5j"/>
                         <constraint firstAttribute="height" constant="70" id="IIc-8v-zAO"/>
+                        <constraint firstItem="Mob-aZ-UPx" firstAttribute="bottom" secondItem="p8N-hB-KvW" secondAttribute="bottom" constant="15" id="RJr-1O-KT3"/>
                         <constraint firstAttribute="trailing" secondItem="kDh-rJ-ncr" secondAttribute="trailing" constant="16" id="ZOI-gB-YPe"/>
                         <constraint firstItem="kDh-rJ-ncr" firstAttribute="top" secondItem="RwR-7B-hRi" secondAttribute="top" constant="15" id="kAl-pf-UO7"/>
+                        <constraint firstItem="p8N-hB-KvW" firstAttribute="leading" secondItem="Mob-aZ-UPx" secondAttribute="leading" constant="16" id="nJN-ia-R0z"/>
+                        <constraint firstItem="p8N-hB-KvW" firstAttribute="top" secondItem="Mob-aZ-UPx" secondAttribute="top" constant="15" id="wr3-XC-m1K"/>
                     </constraints>
                 </view>
             </subviews>
