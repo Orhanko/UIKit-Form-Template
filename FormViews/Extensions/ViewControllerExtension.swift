@@ -44,4 +44,14 @@ extension UIViewController{
     @objc func exitButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
+    
+    func configureNextButton(for button: UIButton){
+        var config = UIButton.Configuration.filled()
+           config.title = "Next"
+           config.image = UIImage(systemName: "chevron.forward.circle.fill")
+           config.imagePlacement = .trailing
+           config.imagePadding = 4
+        
+        button.configuration = config
+    }
 }

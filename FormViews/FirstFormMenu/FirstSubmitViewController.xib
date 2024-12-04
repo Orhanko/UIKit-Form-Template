@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSubmitViewController" customModule="FormViews" customModuleProvider="target">
             <connections>
+                <outlet property="nextButton" destination="ZAe-Uk-3Bj" id="s46-V9-tGI"/>
                 <outlet property="stackView" destination="3rj-2F-Kd6" id="mdT-9o-3rJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,9 +41,18 @@
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-zT-ovP" userLabel="ButtonContainer">
                     <rect key="frame" x="0.0" y="748" width="393" height="70"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-Uk-3Bj">
+                            <rect key="frame" x="302" y="15" width="75" height="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                        </button>
+                    </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ZAe-Uk-3Bj" secondAttribute="bottom" constant="15" id="F1o-8o-9XI"/>
                         <constraint firstAttribute="height" constant="70" id="YXN-Jz-KY9"/>
+                        <constraint firstAttribute="trailing" secondItem="ZAe-Uk-3Bj" secondAttribute="trailing" constant="16" id="jKB-zf-SkQ"/>
+                        <constraint firstItem="ZAe-Uk-3Bj" firstAttribute="top" secondItem="FdV-zT-ovP" secondAttribute="top" constant="15" id="rlJ-IQ-OV9"/>
                     </constraints>
                 </view>
             </subviews>
@@ -63,9 +73,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
