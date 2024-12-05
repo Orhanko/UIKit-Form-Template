@@ -26,72 +26,17 @@ class SecondSubmitViewController: UIViewController {
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         let slika = CustomPhotoUploadView(title: "Title for Photo Upload", description: "This is section where users can upload photo of their service", footerDescription: "Please upload photo of your service. Maximum size is 5MB. Only jpg, png and jpeg files are allowed.")
         stackView.addArrangedSubview(slika)
-        updateSpacerConstraints()
-        setupSpacers()
-        
+        updateSpacerConstraints(topSpacer: topSpacer, bottomSpacer: bottomSpacer, stackView: stackView, buttonsContainer: buttonsContainer, isInitialSetupComplete: isInitialSetupComplete)
+        setupSpacers(stackView: stackView, topSpacer: &topSpacer, bottomSpacer: &bottomSpacer)
     }
     
     @objc func nextButtonTapped() {
         navigateToNextScreen(to: ThirdSubmitViewController())
     }
     
-    func updateSpacerConstraints() {
-        guard let topSpacer = topSpacer, let bottomSpacer = bottomSpacer else { return }
-        
-        // Reset spacers
-        topSpacer.constraints.forEach { $0.isActive = false }
-        bottomSpacer.constraints.forEach { $0.isActive = false }
-        
-        // Dobijamo visinu stackView-a kroz Auto Layout
-        let stackViewHeight = stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-        
-        // Visina vidljivog prostora u scrollView-u
-        let scrollViewHeight = view.frame.height
-        - buttonsContainer.frame.height // Oduzimamo visinu buttonContainer-a
-        - view.safeAreaInsets.top
-        - view.safeAreaInsets.bottom
-        
-        if stackViewHeight < scrollViewHeight {
-            let extraSpace = scrollViewHeight - stackViewHeight
-            let spacerHeight = extraSpace / 2
-            
-            NSLayoutConstraint.activate([
-                topSpacer.heightAnchor.constraint(equalToConstant: spacerHeight),
-                bottomSpacer.heightAnchor.constraint(equalToConstant: spacerHeight)
-            ])
-        } else {
-            NSLayoutConstraint.activate([
-                topSpacer.heightAnchor.constraint(equalToConstant: 0),
-                bottomSpacer.heightAnchor.constraint(equalToConstant: 0)
-            ])
-        }
-        
-        if isInitialSetupComplete {
-            UIView.animate(withDuration: 0.3) {
-                self.view.layoutIfNeeded()
-            }
-        } else {
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    func setupSpacers() {
-        // Dodaj top spacer
-        topSpacer = UIView()
-        //topSpacer?.backgroundColor = .black
-        topSpacer?.translatesAutoresizingMaskIntoConstraints = false
-        stackView.insertArrangedSubview(topSpacer!, at: 0)
-        
-        // Dodaj bottom spacer
-        bottomSpacer = UIView()
-        //bottomSpacer?.backgroundColor = .red
-        bottomSpacer?.translatesAutoresizingMaskIntoConstraints = false
-        stackView.addArrangedSubview(bottomSpacer!)
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        updateSpacerConstraints()
+        updateSpacerConstraints(topSpacer: topSpacer, bottomSpacer: bottomSpacer, stackView: stackView, buttonsContainer: buttonsContainer, isInitialSetupComplete: isInitialSetupComplete)
         isInitialSetupComplete = true
     }
 }

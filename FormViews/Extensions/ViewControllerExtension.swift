@@ -71,4 +71,58 @@ extension UIViewController{
     func navigateToNextScreen(to submitViewController: UIViewController){
         navigationController?.pushViewController(submitViewController, animated: true)
     }
+    
+    func updateSpacerConstraints(topSpacer: UIView?, bottomSpacer: UIView?, stackView: UIStackView, buttonsContainer: UIView, isInitialSetupComplete: Bool) {
+        guard let topSpacer = topSpacer, let bottomSpacer = bottomSpacer else { return }
+        
+        // Reset spacers
+        topSpacer.constraints.forEach { $0.isActive = false }
+        bottomSpacer.constraints.forEach { $0.isActive = false }
+        
+        // Dobijamo visinu stackView-a kroz Auto Layout
+        let stackViewHeight = stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        
+        // Visina vidljivog prostora u scrollView-u
+        let scrollViewHeight = view.frame.height
+        - buttonsContainer.frame.height // Oduzimamo visinu buttonContainer-a
+        - view.safeAreaInsets.top
+        - view.safeAreaInsets.bottom
+        
+        if stackViewHeight < scrollViewHeight {
+            let extraSpace = scrollViewHeight - stackViewHeight
+            let spacerHeight = extraSpace / 2
+            
+            NSLayoutConstraint.activate([
+                topSpacer.heightAnchor.constraint(equalToConstant: spacerHeight),
+                bottomSpacer.heightAnchor.constraint(equalToConstant: spacerHeight)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                topSpacer.heightAnchor.constraint(equalToConstant: 0),
+                bottomSpacer.heightAnchor.constraint(equalToConstant: 0)
+            ])
+        }
+        
+        if isInitialSetupComplete {
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func setupSpacers(stackView: UIStackView, topSpacer: inout UIView?, bottomSpacer: inout UIView?) {
+        // Dodaj top spacer
+        topSpacer = UIView()
+        //topSpacer?.backgroundColor = .black
+        topSpacer?.translatesAutoresizingMaskIntoConstraints = false
+        stackView.insertArrangedSubview(topSpacer!, at: 0)
+        
+        // Dodaj bottom spacer
+        bottomSpacer = UIView()
+        //bottomSpacer?.backgroundColor = .red
+        bottomSpacer?.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(bottomSpacer!)
+    }
 }
