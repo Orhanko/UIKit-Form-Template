@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="689"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3rj-2F-Kd6">
-                            <rect key="frame" x="16" y="0.0" width="361" height="689"/>
+                            <rect key="frame" x="16" y="20" width="361" height="649"/>
                         </stackView>
                     </subviews>
                     <constraints>
@@ -33,7 +33,7 @@
                         <constraint firstItem="3rj-2F-Kd6" firstAttribute="centerY" secondItem="eJP-ER-8hc" secondAttribute="centerY" placeholder="YES" id="IFf-83-GRH"/>
                         <constraint firstItem="3rj-2F-Kd6" firstAttribute="bottom" secondItem="HDG-jn-aVM" secondAttribute="bottom" id="Lj0-7R-4v2"/>
                         <constraint firstItem="3rj-2F-Kd6" firstAttribute="trailing" secondItem="HDG-jn-aVM" secondAttribute="trailing" constant="16" id="aCS-tI-8tk"/>
-                        <constraint firstItem="3rj-2F-Kd6" firstAttribute="top" secondItem="HDG-jn-aVM" secondAttribute="top" id="uGP-2E-iNa"/>
+                        <constraint firstItem="3rj-2F-Kd6" firstAttribute="top" secondItem="HDG-jn-aVM" secondAttribute="top" constant="20" id="uGP-2E-iNa"/>
                         <constraint firstItem="3rj-2F-Kd6" firstAttribute="leading" secondItem="HDG-jn-aVM" secondAttribute="leading" constant="16" id="w0G-ML-bYx"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="HDG-jn-aVM"/>

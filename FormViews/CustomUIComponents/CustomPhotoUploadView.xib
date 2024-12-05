@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomPhotoUploadView" customModule="FormViews" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="Ecv-9w-a4V" id="LCz-se-PYs"/>
+                <outlet property="footerDescription" destination="raf-A5-qBb" id="hfG-Ff-yub"/>
+                <outlet property="galleryDescription" destination="LD4-7Y-rXa" id="J1s-ie-ynf"/>
+                <outlet property="galleryTitle" destination="2PP-Qs-d1Y" id="6gq-ov-4gI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="456" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PP-Qs-d1Y">
+                    <rect key="frame" x="0.0" y="0.0" width="456" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD4-7Y-rXa">
+                    <rect key="frame" x="0.0" y="32" width="456" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footer Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raf-A5-qBb">
+                    <rect key="frame" x="0.0" y="130.33333333333334" width="456" height="15.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <color key="textColor" systemColor="placeholderTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-9w-a4V">
+                    <rect key="frame" x="0.0" y="66" width="75" height="48.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="LD4-7Y-rXa" firstAttribute="top" secondItem="2PP-Qs-d1Y" secondAttribute="bottom" constant="8" id="1fB-zk-AeN"/>
+                <constraint firstItem="raf-A5-qBb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2SO-1D-ukS"/>
+                <constraint firstAttribute="trailing" secondItem="2PP-Qs-d1Y" secondAttribute="trailing" id="3bD-MB-rBa"/>
+                <constraint firstItem="Ecv-9w-a4V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="48i-DZ-UmA"/>
+                <constraint firstAttribute="trailing" secondItem="LD4-7Y-rXa" secondAttribute="trailing" id="87u-uV-WLU"/>
+                <constraint firstItem="raf-A5-qBb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ol5-HV-99Q"/>
+                <constraint firstItem="raf-A5-qBb" firstAttribute="top" secondItem="Ecv-9w-a4V" secondAttribute="bottom" constant="16" id="Oxq-sH-XeT"/>
+                <constraint firstItem="2PP-Qs-d1Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UUH-nw-px9"/>
+                <constraint firstItem="2PP-Qs-d1Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bJ7-Ou-Y4j"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="raf-A5-qBb" secondAttribute="bottom" id="lan-dA-crz"/>
+                <constraint firstItem="raf-A5-qBb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="tfm-Sr-9IZ"/>
+                <constraint firstItem="LD4-7Y-rXa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xZi-Us-Mza"/>
+                <constraint firstItem="Ecv-9w-a4V" firstAttribute="top" secondItem="LD4-7Y-rXa" secondAttribute="bottom" constant="16" id="z4v-SU-j7F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-61.068702290076331" y="-187.32394366197184"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

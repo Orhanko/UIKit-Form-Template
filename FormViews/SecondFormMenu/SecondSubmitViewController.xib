@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="689"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-Sv-V6s">
-                            <rect key="frame" x="16" y="0.0" width="361" height="689"/>
+                            <rect key="frame" x="16" y="20" width="361" height="649"/>
                         </stackView>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="FSZ-8C-hiB"/>
@@ -35,7 +35,7 @@
                         <constraint firstItem="ZkB-Sv-V6s" firstAttribute="centerY" secondItem="cil-uO-ZEs" secondAttribute="centerY" placeholder="YES" id="NYj-xV-D21"/>
                         <constraint firstItem="ZkB-Sv-V6s" firstAttribute="bottom" secondItem="yqR-Ox-P0T" secondAttribute="bottom" id="NgI-HN-tqq"/>
                         <constraint firstItem="ZkB-Sv-V6s" firstAttribute="width" secondItem="6CG-eN-bCE" secondAttribute="width" multiplier="0.918575" id="Oeg-em-7GI"/>
-                        <constraint firstItem="ZkB-Sv-V6s" firstAttribute="top" secondItem="yqR-Ox-P0T" secondAttribute="top" id="u2R-5m-ZFB"/>
+                        <constraint firstItem="ZkB-Sv-V6s" firstAttribute="top" secondItem="yqR-Ox-P0T" secondAttribute="top" constant="20" id="u2R-5m-ZFB"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="yqR-Ox-P0T"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="6CG-eN-bCE"/>
