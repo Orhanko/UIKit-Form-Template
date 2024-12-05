@@ -42,7 +42,16 @@ extension UIViewController{
     }
     
     @objc func exitButtonTapped() {
-        navigationController?.popViewController(animated: true)
+        if let navigationController = navigationController {
+            for viewController in navigationController.viewControllers {
+                if viewController is MainFormViewController {
+                    navigationController.popToViewController(viewController, animated: true)
+                    break
+                }
+            }
+        } else {
+            print("Navigation controller not found.")
+        }
     }
     
     func configureNextButton(for button: UIButton){

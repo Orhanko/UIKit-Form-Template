@@ -21,6 +21,11 @@ class ThirdSubmitViewController: UIViewController {
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         let proba = CustomTextFieldView(title: "Proba Title 3", description: "Description 3")
         stackView.addArrangedSubview(proba)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func nextButtonTapped() {
+        navigateToNextScreen(to: FourthSubmitViewController())
     }
     
     
