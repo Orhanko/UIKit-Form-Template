@@ -23,9 +23,10 @@ class SecondSubmitViewController: UIViewController {
         let slika = CustomPhotoUploadView(title: "Title for Photo Upload", description: "This is section where users can upload photo of their service", footerDescription: "Please upload photo of your service. Maximum size is 5MB. Only jpg, png and jpeg files are allowed.")
         stackView.addArrangedSubview(slika)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
-    @objc func backButtonTapped() {
-        navigationController?.popViewController(animated: true)
+    @objc func nextButtonTapped() {
+        navigateToNextScreen(to: ThirdSubmitViewController())
     }
 }

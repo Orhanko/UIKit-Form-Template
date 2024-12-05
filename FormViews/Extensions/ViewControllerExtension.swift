@@ -63,4 +63,12 @@ extension UIViewController{
         
         button.configuration = config
     }
+    
+    @objc func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func navigateToNextScreen(to submitViewController: UIViewController){
+        navigationController?.pushViewController(submitViewController, animated: true)
+    }
 }

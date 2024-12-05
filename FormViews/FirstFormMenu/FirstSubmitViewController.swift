@@ -28,10 +28,8 @@ class FirstSubmitViewController: UIViewController {
         stackView.addArrangedSubview(proba2)
         stackView.addArrangedSubview(proba3)
     }
-    
-    
-    
+
     @objc func nextButtonTapped(){
-        navigationController?.pushViewController(SecondSubmitViewController(), animated: true)
+        navigateToNextScreen(to: SecondSubmitViewController())
     }
 }
