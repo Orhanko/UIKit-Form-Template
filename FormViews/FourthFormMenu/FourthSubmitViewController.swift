@@ -22,5 +22,10 @@ class FourthSubmitViewController: UIViewController {
         let proba = CustomTextFieldView(title: "Title for 4 VC", description: "Description for 4 VC")
         stackView.addArrangedSubview(proba)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    @objc func nextButtonTapped() {
+        navigateToNextScreen(to: FifthSubmitViewController())
+        
     }
 }
