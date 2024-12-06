@@ -9,8 +9,18 @@ import UIKit
 
 class FifthSubmitViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var buttonsContainer: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Fifth initialized")
+        title = "5/8"
+        configureNavigationBar()
+        configureBackButton(for: backButton)
+        configureNextButton(for: nextButton)
+        backButton.addTarget(self, action: #selector (backButtonTapped), for: .touchUpInside)
+        let proba = CustomTextFieldView(title: "Fifth Submit Title", description: "Fifth Submit Description")
+        stackView.addArrangedSubview(proba)
     }
 }

@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FifthSubmitViewController" customModule="FormViews" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="eKO-x5-40A" id="VJf-4J-sf3"/>
+                <outlet property="buttonsContainer" destination="UoI-Cs-Ptz" id="rLP-y2-dsf"/>
+                <outlet property="nextButton" destination="fFb-12-D1T" id="g8l-9v-VQq"/>
+                <outlet property="stackView" destination="yfo-82-keG" id="2rJ-Cw-MQ6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
