@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		47DDBFBB2D03852100BB15A2 /* FormViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		474BFD622D08BB5C008C3D43 /* FormViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		476DA9962CCA5A3F00A489FB /* Exceptions for "FormViews" folder in "FormViews" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Support/Info.plist,
 			);
 			target = 476DA9832CCA5A3D00A489FB /* FormViews */;
 		};
@@ -46,7 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				476DA9862CCA5A3D00A489FB /* FormViews */,
-				47DDBFBB2D03852100BB15A2 /* FormViews.app */,
+				474BFD622D08BB5C008C3D43 /* FormViews.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = FormViews;
-			productReference = 47DDBFBB2D03852100BB15A2 /* FormViews.app */;
+			productReference = 474BFD622D08BB5C008C3D43 /* FormViews.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +139,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L856TH7U8P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FormViews/Info.plist;
+				INFOPLIST_FILE = FormViews/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -166,7 +166,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L856TH7U8P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FormViews/Info.plist;
+				INFOPLIST_FILE = FormViews/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
