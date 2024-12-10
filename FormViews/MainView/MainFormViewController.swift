@@ -45,7 +45,7 @@ extension MainFormViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = viewModel.getFormName(id: id)
         cell.iconImageView.image = UIImage(systemName: "\(id+1).square.fill")
 
-        cell.iconImageView.tintColor = .systemGray2
+        cell.iconImageView.tintColor = .systemBlue
         return cell
     }
     

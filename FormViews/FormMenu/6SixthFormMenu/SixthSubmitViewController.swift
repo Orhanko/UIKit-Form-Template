@@ -26,8 +26,13 @@ class SixthSubmitViewController: UIViewController {
         let proba = CustomTextFieldView(title: "Title for 6 VC", description: "Description for 6 VC")
         stackView.addArrangedSubview(proba)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         updateSpacerConstraints(topSpacer: topSpacer, bottomSpacer: bottomSpacer, stackView: stackView, buttonsContainer: buttonsContainer, isInitialSetupComplete: isInitialSetupComplete)
         setupSpacers(stackView: stackView, topSpacer: &topSpacer, bottomSpacer: &bottomSpacer)
+    }
+    
+    @objc func nextButtonTapped() {
+        navigateToNextScreen(to: SeventhSubmitViewController())
     }
     
     override func viewDidLayoutSubviews() {
